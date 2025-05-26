@@ -93,7 +93,7 @@ body {
     }
     &__card-link {
         display: block;
-        transition: transform 0.3s ease;
+        transition: transform 0.4s ease;
     }
     &__card {
         display: flex;
@@ -110,7 +110,7 @@ body {
         align-self: end;
     }
     &__card-link:hover {
-        transform: scale(1.03);
+        transform: scale(1.04);
     }
     &__img {
         border-radius: 30px;
