@@ -1,0 +1,27 @@
+@mixin bg-default {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin button {
+  width: 247px;
+  height: 66px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 60px;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+@mixin button_hover {
+  background-color: #fff;
+  color: #000;
+}
+@mixin stars{
+  position: absolute;
+  z-index: 1;
+}

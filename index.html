@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__stars">
+            <img class="header__stars-right" src="SVG/stars_right.svg" alt="right stars">
+            <img class="header__stars-left" src="SVG/stars_left.svg" alt="left stars">
+        </div>
+        <div class="header__content">
+            <h1 class="header__title">Добро пожаловать
+                на мой сайт мини-игр
+            </h1>
+            <p class="header__description">Тебе предстоит пройти несколько увлекательных игр.</p>
+            <p class="header__description">Если готов, нажимай <span class="header__description-bold">«Поехали!»</span>
+                и <span class="header__description-bold">приступай.</span></p>
+            <a href="#main__cards" class="header__button" type="button">Поехали!</a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__content">
+            <section class="main__section">
+                <h2 class="main__title">Об играх</h2>
+                <div class="main__description">
+                    <p class="main__text">В моей коллекции представлено 6 игр на разные темы</p>
+                    <p class="main__text">Игры несложные — в них может поиграть каждый.</p>
+                    <p class="main__text">Все игры доступны для пользования.</p>
+                </div>
+                <div class="main__cards" id="main__cards">
+                    <a href="#guess_num" class="main__card-link">
+                        <div class="main__card">
+                            <img class="main__img" src="img/card_1.png" alt="card1">
+                            <div class="main__card-text">
+                                <span class="main__card-num">Игра № 1</span>
+                                <h3 class="main__card-name">Угадай число</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="main__card-link">
+                        <div class="main__card">
+                            <img class="main__img" src="img/card_2.png" alt="card2">
+                            <div class="main__card-text">
+                                <span class="main__card-num">Игра № 2</span>
+                                <h3 class="main__card-name">Простая арифметика</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="main__card-link">
+                        <div class="main__card">
+                            <img class="main__img" src="img/card_3.png" alt="card3">
+                            <div class="main__card-text">
+                                <span class="main__card-num">Игра № 3</span>
+                                <h3 class="main__card-name">Переверни текст</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="main__card-link">
+                        <div class="main__card">
+                            <img class="main__img" src="img/card_4.png" alt="card4">
+                            <div class="main__card-text">
+                                <span class="main__card-num">Игра № 4</span>
+                                <h3 class="main__card-name">Камень, ножницы,
+                                    бумага</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="main__card-link">
+                        <div class="main__card">
+                            <img class="main__img" src="img/card_5.png" alt="card5">
+                            <div class="main__card-text">
+                                <span class="main__card-num">Игра № 5</span>
+                                <h3 class="main__card-name">Простая
+                                    викторина</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="main__card-link">
+                        <div class="main__card">
+                            <img class="main__img" src="img/card_6.png" alt="card6">
+                            <div class="main__card-text">
+                                <span class="main__card-num">Игра № 6</span>
+                                <h3 class="main__card-name">Генератор
+                                    случайных
+                                    цветов</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <img class="main__cards-starR" src="SVG/cards_star_right.png" alt="star">
+                <img class="main__cards-starL" src="SVG/cards_stars_left.svg" alt="stars">
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
