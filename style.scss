@@ -64,7 +64,9 @@ body {
 .main {
     background: #202027;
     position: relative;
-
+    &__section {
+        margin: 50px;
+    }
     &__content {
         max-width: 1200px;
         margin: 0 auto;
@@ -82,14 +84,21 @@ body {
         font-size: 64px;
         margin-bottom: 24px;   
     }
+    &__text{
+        font-size:24px;
+    }
     &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        display: flex;
+        flex-wrap: wrap;
         gap: 32px;
-        align-content: space-between;
         margin-top: 72px;
         position: relative;
         z-index: 2;
+    }
+    &__card-couple {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     &__card-link {
         display: block;
