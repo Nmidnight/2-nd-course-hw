@@ -129,7 +129,7 @@ body {
   align-self: end;
 }
 .main__card-link:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 .main__img {
   border-radius: 30px;
