@@ -64,9 +64,7 @@ body {
 .main {
     background: #202027;
     position: relative;
-    &__section {
-        margin: 50px;
-    }
+
     &__content {
         max-width: 1200px;
         margin: 0 auto;
@@ -89,16 +87,17 @@ body {
     }
     &__cards {
         display: flex;
-        flex-wrap: wrap;
         gap: 32px;
         margin-top: 72px;
         position: relative;
         z-index: 2;
     }
-    &__card-couple {
+    &__cards-couple {
         display: flex;
+        gap: 32px;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+
     }
     &__card-link {
         display: block;
@@ -106,6 +105,7 @@ body {
     }
     &__card {
         display: flex;
+        gap: 32px;
         flex-direction: column;
         justify-content: space-between;
         color: #000;

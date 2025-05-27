@@ -79,9 +79,6 @@ body {
   background: #202027;
   position: relative;
 }
-.main__section {
-  margin: 50px;
-}
 .main__content {
   max-width: 1200px;
   margin: 0 auto;
@@ -103,16 +100,16 @@ body {
 }
 .main__cards {
   display: flex;
-  flex-wrap: wrap;
   gap: 32px;
   margin-top: 72px;
   position: relative;
   z-index: 2;
 }
-.main__card-couple {
+.main__cards-couple {
   display: flex;
+  gap: 32px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 .main__card-link {
   display: block;
@@ -120,6 +117,7 @@ body {
 }
 .main__card {
   display: flex;
+  gap: 32px;
   flex-direction: column;
   justify-content: space-between;
   color: #000;
