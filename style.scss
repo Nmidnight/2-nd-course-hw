@@ -82,14 +82,22 @@ body {
         font-size: 64px;
         margin-bottom: 24px;   
     }
+    &__text{
+        font-size:24px;
+    }
     &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        display: flex;
         gap: 32px;
-        align-content: space-between;
         margin-top: 72px;
         position: relative;
         z-index: 2;
+    }
+    &__cards-couple {
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+        justify-content: space-between;
+
     }
     &__card-link {
         display: block;
@@ -97,6 +105,7 @@ body {
     }
     &__card {
         display: flex;
+        gap: 32px;
         flex-direction: column;
         justify-content: space-between;
         color: #000;
