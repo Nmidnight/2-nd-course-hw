@@ -1,6 +1,8 @@
 @use "vars";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +33,10 @@ body {
         top: 69px;
         left: 63px;
     }
+    &__stars-bottom {
+        @include vars.stars;
+        display: none;
+    }
     &__content {
         max-width: 1200px;
         margin: 0 auto;
@@ -42,11 +48,11 @@ body {
         font-size: 64px;
         font-weight: 700;
         white-space: pre-line;
-
     }
     &__description {
         font-size: 24px;
         line-height: 32px;
+        white-space: pre-line;
     }
     &__description-bold {
         font-weight: 600;
@@ -56,23 +62,27 @@ body {
         padding: 16px 64px;
         @include vars.button;
         display: inline-block;
-    }
-    &__button:hover {
-        @include vars.button_hover;
+        &:hover {
+            @include vars.button_hover;
+        }
     }
 }
 .main {
     background: #202027;
     position: relative;
 
-    &__content {
+    &__content,
+    &__games {
         max-width: 1200px;
         margin: 0 auto;
         color: white;
-        padding: 94px 0 146px;
-
+        padding: 48px 0 146px;
+    }
+    &__section {
+        margin: 46px 0 50px;
     }
     &__description {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 8px;
@@ -80,10 +90,10 @@ body {
     &__title {
         font-weight: 700;
         font-size: 64px;
-        margin-bottom: 24px;   
+        margin-bottom: 24px;
     }
-    &__text{
-        font-size:24px;
+    &__text {
+        font-size: 24px;
     }
     &__cards {
         display: flex;
@@ -97,7 +107,6 @@ body {
         gap: 32px;
         flex-direction: column;
         justify-content: space-between;
-
     }
     &__card-link {
         display: block;
@@ -113,20 +122,16 @@ body {
         border-radius: 30px;
         padding-bottom: 36px;
     }
-    &__card-link:nth-child(6n+4),
-    &__card-link:nth-child(6n+5),
-    &__card-link:nth-child(6n+6) {
-        align-self: end;
-    }
     &__card-link:hover {
-        transform: scale(1.04);
+        transform: scale(1.03);
     }
     &__img {
         border-radius: 30px;
         min-width: 100%;
     }
     &__card-text {
-        width: 314px;
+        max-width: 314px;
+        width: 90%;
         margin: 0 auto;
     }
     &__card-num {
@@ -145,14 +150,244 @@ body {
         font-size: 32px;
         white-space: pre-line;
     }
-    &__cards-starR{
+    &__cards-starR {
         @include vars.stars;
         top: 77px;
         right: 0;
     }
-    &__cards-starL{
+    &__cards-starL {
         @include vars.stars;
         top: 771px;
         left: 25px;
+    }
+    &__game-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__game {
+        width: 100%;
+        background: #ffffff;
+        color: #000;
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        border-radius: 30px;
+        &:first-child {
+            margin-top: 72px;
+        }
+        scroll-margin-top: 120px;
+    }
+
+    &__game img {
+        width: 600px;
+        border-radius: 30px;
+        object-fit: cover;
+    }
+
+    &__game-description {
+        width: 100%;
+        padding: 48px;
+    }
+    &__game-title {
+        font-weight: 700;
+        font-size: 48px;
+        margin-bottom: 16px;
+        white-space: pre-line;
+    }
+    &__game-text {
+        font-size: 24px;
+        white-space: pre-line;
+    }
+    &__game-button {
+        margin-top: 36px;
+        @include vars.button;
+        &:hover {
+            @include vars.button_hover;
+        }
+    }
+    &__card-starT {
+        @include vars.stars;
+        right: 45px;
+        transform: translateY(-30px);
+    }
+    &__card-starB {
+        @include vars.stars;
+        right: 52px;
+        bottom: 45px;
+    }
+}
+.footer {
+    background: #bded35;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        text-align: center;
+    }
+    &__text {
+        font-size: 24px;
+        font-weight: 600;
+        color: #000;
+    }
+}
+@media (max-width: 1200px) {
+    .header {
+        padding: 120px 20px 160px;
+
+        &__title {
+            font-size: 48px;
+        }
+
+        &__description {
+            font-size: 20px;
+        }
+
+        &__button {
+            padding: 12px 48px;
+        }
+    }
+
+    .main {
+        &__content,
+        &__games {
+            padding: 32px 20px 80px;
+        }
+
+        &__title {
+            font-size: 48px;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+
+        &__cards {
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+        }
+
+        &__cards-couple {
+            flex-direction: row;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__card {
+            width: 100%;
+            max-width: 320px;
+            padding-bottom: 24px;
+        }
+
+        &__card-name {
+            font-size: 24px;
+        }
+
+        &__card-num {
+            font-size: 14px;
+        }
+
+        &__game {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 100%;
+                max-height: 285px;
+                object-fit: cover;
+                @include vars.bg-default;
+            }
+        }
+
+        &__game-title {
+            font-size: 36px;
+        }
+
+        &__game-text {
+            font-size: 20px;
+        }
+
+        &__game-description {
+            padding: 24px;
+        }
+
+        &__game-button {
+            margin-top: 24px;
+        }
+    }
+
+    .footer {
+        padding: 40px 20px;
+
+        &__text {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    //#main__cards {
+    //        scroll-margin-top: 200px;
+    //}
+    .header {
+        text-align: center;
+
+        &__title {
+            font-size: 40px;
+        }
+        &__description {
+            font-size: 16px;
+            white-space: normal;
+        }
+        &__button {
+            width: 285px;
+            margin-top: 38px;
+            font-size: 16px;
+            padding: 20px 0;
+        }
+        &__stars-left {
+            width: 75px;
+            left: 37px;
+        }
+        &__stars-bottom {
+            display: block;
+            right: 34px;
+            bottom: 79px;
+        }
+    }
+    .main__section-cards {
+        display: none;
+    }
+    .main__title {
+        font-size: 40px;
+    }
+    .main__card-text {
+        justify-content: center;
+    }
+    .main__card-name {
+        font-size: 32px;
+    }
+    .main__game:nth-child(odd) {
+        flex-direction: column-reverse;
+
+        & img {
+            width: 100%;
+        }
+    }
+    .main__game-title {
+        font-size: 32px;
+    }
+
+    .main__game-text {
+        font-size: 16px;
+    }
+    .main__card-starB, .main__card-starT, .main__cards-starR, .main__cards-starL {
+        display: none;
+    }
+    .footer__text {
+        font-size: 16px;
     }
 }

@@ -11,22 +11,26 @@
 <body>
     <header class="header">
         <div class="header__stars">
-            <img class="header__stars-right" src="SVG/stars_right.svg" alt="right stars">
+            <picture>
+                <source media="(max-width: 768px)" srcset="SVG/big_star_mobile.svg">
+                <img class="header__stars-right" src="SVG/stars_right.svg" alt="right stars">
+            </picture>
             <img class="header__stars-left" src="SVG/stars_left.svg" alt="left stars">
+            <img src="SVG/header_stars_bottom.svg" alt="stars" class="header__stars-bottom">
         </div>
         <div class="header__content">
             <h1 class="header__title">Добро пожаловать
                 на мой сайт мини-игр
             </h1>
-            <p class="header__description">Тебе предстоит пройти несколько увлекательных игр.</p>
-            <p class="header__description">Если готов, нажимай <span class="header__description-bold">«Поехали!»</span>
+            <p class="header__description">Тебе предстоит пройти несколько увлекательных игр.
+                Если готов, нажимай <span class="header__description-bold">«Поехали!»</span>
                 и <span class="header__description-bold">приступай.</span></p>
             <a href="#main__cards" class="header__button" type="button">Поехали!</a>
         </div>
     </header>
     <main class="main">
         <div class="main__content">
-            <section class="main__section">
+            <section class="main__section main__section-cards">
                 <h2 class="main__title">Об играх</h2>
                 <div class="main__description">
                     <p class="main__text">В моей коллекции представлено 6 игр на разные темы</p>
@@ -44,7 +48,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="main__card-link">
+                        <a href="#rock_paper_scissors" class="main__card-link">
                             <div class="main__card">
                                 <img class="main__img" src="img/card_4.png" alt="card4">
                                 <div class="main__card-text">
@@ -56,7 +60,7 @@
                         </a>
                     </div>
                     <div class="main__cards-couple">
-                        <a href="#" class="main__card-link">
+                        <a href="#simple_arithmetic" class="main__card-link">
                             <div class="main__card">
                                 <img class="main__img" src="img/card_2.png" alt="card2">
                                 <div class="main__card-text">
@@ -65,7 +69,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="main__card-link">
+                        <a href="#simple_quiz" class="main__card-link">
                             <div class="main__card">
                                 <img class="main__img" src="img/card_5.png" alt="card5">
                                 <div class="main__card-text">
@@ -77,7 +81,7 @@
                         </a>
                     </div>
                     <div class="main__cards-couple">
-                        <a href="#" class="main__card-link">
+                        <a href="#reverse_text" class="main__card-link">
                             <div class="main__card">
                                 <img class="main__img" src="img/card_3.png" alt="card3">
                                 <div class="main__card-text">
@@ -86,7 +90,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="main__card-link">
+                        <a href="#random_color_generator" class="main__card-link">
                             <div class="main__card">
                                 <img class="main__img" src="img/card_6.png" alt="card6">
                                 <div class="main__card-text">
@@ -102,8 +106,83 @@
                 <img class="main__cards-starR" src="SVG/cards_star_right.png" alt="star">
                 <img class="main__cards-starL" src="SVG/cards_stars_left.svg" alt="stars">
             </section>
+            <section class="main__section">
+                <div class="main__games-catalog">
+                    <h2 class="main__title">Мини-игры</h2>
+                    <div class="main__game-container">
+                        <div class="main__game" id="guess_num">
+                            <div class="main__game-description">
+                                <h3 class="main__game-title">Угадай число</h3>
+                                <p class="main__game-text">Попробуй угадать случайное
+                                    число от 1 до 100.</p>
+                                <button type="submit" class="main__game-button">Играть!</button>
+                            </div>
+                            <img src="/img/card_11.png" alt="guess_num">
+                        </div>
+                        <div class="main__game" id="simple_arithmetic">
+                            <img src="img/card_22.png" alt="simple_arithmetic">
+                            <div class="main__game-description">
+                                <h3 class="main__game-title">Простая
+                                    арифметика</h3>
+                                <p class="main__game-text">Попробуй решить простые
+                                    арифметические задачи.</p>
+                                <button type="button" class="main__game-button">Играть!</button>
+                            </div>
+                        </div>
+                        <div class="main__game" id="reverse_text">
+                            <div class="main__game-description">
+                                <h3 class="main__game-title"> Переверни текст
+                                </h3>
+                                <p class="main__game-text">Попробуй ввести текст, который
+                                    будет перевернут.</p>
+                                <button type="button" class="main__game-button">Играть!</button>
+                            </div>
+                            <img src="img/card_33.png" alt="reverse_text">
+                        </div>
+                        <div class="main__game" id="rock_paper_scissors">
+                            <img src="img/card_44.png" alt="rock_paper_scissors">
+                            <div class="main__game-description">
+                                <h3 class="main__game-title"> Камень,
+                                    ножницы,
+                                    бумага </h3>
+                                <p class="main__game-text">Сыграй в популярную игру против компьютера.</p>
+                                <button type="button" class="main__game-button">Играть!</button>
+                            </div>
+                        </div>
+                        <div class="main__game" id="simple_quiz">
+                            <div class="main__game-description">
+                                <h3 class="main__game-title">Простая
+                                    викторина</h3>
+                                <p class="main__game-text">Отвечай на вопросы викторины
+                                    с вариантами ответов.</p>
+                                <button type="button" class="main__game-button">Играть!</button>
+                            </div>
+                            <img src="img/card_55.png" alt="quiz">
+                        </div>
+                        <div class="main__game" id="random_color_generator">
+                            <img src="img/card_66.png" alt="random_color_generator">
+                            <div class="main__game-description">
+                                <h3 class="main__game-title">Генератор
+                                    случайных
+                                    цветов</h3>
+                                <p class="main__game-text">Игра, в которой при клике на кнопку
+                                    фон страницы меняется на случайный.</p>
+                                <button type="button" class="main__game-button">Играть!</button>
+                            </div>
+                        </div>
+                        <img src="SVG/games_top_stars.svg" alt="top stars" class="main__card-starT">
+                        <img src="SVG/cards-bottom-stars.svg" alt="bottom stars" class="main__card-starB">
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
