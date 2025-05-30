@@ -362,13 +362,13 @@ body {
         display: none;
     }
     .main__title {
-        font-size: 36px;
+        font-size: 40px;
     }
     .main__card-text {
         justify-content: center;
     }
     .main__card-name {
-        font-size: 20px;
+        font-size: 32px;
     }
     .main__game:nth-child(odd) {
         flex-direction: column-reverse;
@@ -378,16 +378,16 @@ body {
         }
     }
     .main__game-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .main__game-text {
-        font-size: 18px;
+        font-size: 16px;
     }
     .main__card-starB, .main__card-starT, .main__cards-starR, .main__cards-starL {
         display: none;
     }
     .footer__text {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
