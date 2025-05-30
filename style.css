@@ -365,6 +365,9 @@ body {
     right: 34px;
     bottom: 79px;
   }
+  .main__content {
+    padding-bottom: 10px;
+  }
   .main__section-cards {
     display: none;
   }
