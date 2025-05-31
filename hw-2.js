@@ -44,3 +44,20 @@ num /= 3;
 num ++;
 num--;
 alert(num);
+
+// Задание 8
+
+let age = prompt('Сколько вам лет?');
+alert(`Вам ${age} лет`);
+
+// Задание 9
+
+const user = {
+    name: Ana,
+    age: 30,
+    isAdmin: true,
+}
+
+// Задание 10   
+ let userName = prompt('Как вас зовут?');
+alert(`Привет, ${userName}!`);
