@@ -358,6 +358,9 @@ body {
             bottom: 79px;
         }
     }
+    .main__content {
+        padding-bottom: 10px;
+    }
     .main__section-cards {
         display: none;
     }
@@ -367,9 +370,7 @@ body {
     .main__card-text {
         justify-content: center;
     }
-    .main__card-name {
-        font-size: 32px;
-    }
+
     .main__game:nth-child(odd) {
         flex-direction: column-reverse;
 
