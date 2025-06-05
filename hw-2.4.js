@@ -36,8 +36,8 @@ while (n >= 50) {
     n /= 2;
     num++;
 }
-console.log(`${n}`);
-console.log(`${num}`);
+console.log(n);
+console.log(num);
 
 // Задание 6
 
@@ -59,9 +59,7 @@ console.log(iteration);
 // Задание 8 (необязательное)
 
 let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-let monthNumber = 11;
-
-if ( months[monthNumber - 1] ) {
-    console.log(`Месяц: ${months[monthNumber - 1]}` + `номер месяца: ${monthNumber}`);
+for (let monthNumber = 0; monthNumber < months.length; monthNumber++) {
+    console.log(`${monthNumber + 1} - ${months[monthNumber]}`);
 }
 

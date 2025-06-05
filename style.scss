@@ -375,7 +375,7 @@ body {
         flex-direction: column-reverse;
 
         & img {
-            width: 100%;
+            width: 285px;
         }
     }
     .main__game-title {
@@ -384,6 +384,10 @@ body {
 
     .main__game-text {
         font-size: 16px;
+    }
+    .main__game-button{
+        width: 100%;
+        height: 55px;
     }
     .main__card-starB, .main__card-starT, .main__cards-starR, .main__cards-starL {
         display: none;
