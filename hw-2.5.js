@@ -1,3 +1,25 @@
+document.querySelector('.guess_num').addEventListener('click', function () {
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    let randomNum = getRandomInt(1, 100);
+    let guessed = false;
+    while (!guessed) {
+        let userNum = Number(prompt('Введите число от 1 до 100'));
+        if (isNaN(userNum)) {
+            alert('Вы ввели не число!');
+            continue;
+        }
+        if (userNum < randomNum) {
+            alert('Ваше число меньше загаданного');
+        } else if (userNum > randomNum) {
+            alert('Ваше число больше загаданного');
+        } else {
+            alert('Поздравляю, вы угадали число!');
+            guessed = true;
+        }
+    }
+})
 // Задание 1
 
 const lessNum = (a, b) => a <= b ? a : b;
@@ -12,20 +34,6 @@ const square = (num) => console.log(num * num);
 
 const returnSquare = (num) => {
     return num * num;
-}
-
-// Задание 4
-
-
-function askage() {
-    let age = prompt('Сколько вам лет?');
-    if (age <= 0) {
-        alert(`Вы ввели неправильное значение`);
-    } else if (age > 0 && age < 12) {
-        alert('Привет, друг!');
-    } else if (age >= 13) {
-        alert('Добро пожаловать!');
-    }
 }
 
 // Задание 4
@@ -77,7 +85,7 @@ const circle1 = {
 }
 
 const circle2 = {
-    radius: 10, 
+    radius: 10,
     area: getArea,
     perimeter: getPerimeter
 }
@@ -85,6 +93,7 @@ const circle2 = {
 function getArea() {
     return Math.PI * this.radius ** 2;
 }
+
 function getPerimeter() {
     return 2 * Math.PI * this.radius;
 }
