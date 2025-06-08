@@ -7,7 +7,7 @@ document.querySelector('.guess_num').addEventListener('click', function () {
     while (!guessed) {
         let userNum = Number(prompt('Введите число от 1 до 100'));
         if (isNaN(userNum)) {
-            alert('Вы ввели не число, попробуйте еще раз!');
+            alert('Вы ввели не число!');
             continue;
         }
         if (userNum < randomNum) {
