@@ -380,9 +380,6 @@ body {
   .main__game:nth-child(odd) {
     flex-direction: column-reverse;
   }
-  .main__game:nth-child(odd) img {
-    width: 285px;
-  }
   .main__game-title {
     font-size: 32px;
   }

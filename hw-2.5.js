@@ -5,9 +5,15 @@ document.querySelector('.guess_num').addEventListener('click', function () {
     let randomNum = getRandomInt(1, 100);
     let guessed = false;
     while (!guessed) {
-        let userNum = Number(prompt('Введите число от 1 до 100'));
+        let input = prompt('Введите число от 1 до 100');
+        if (input === null) {
+            alert('Игра прервана.');
+            break;
+        }
+        let userNum = Number(input);
         if (isNaN(userNum)) {
-            alert('Вы ввели не число!');        
+            alert('Вы ввели не число!');
+            continue;
         }
         if (userNum < randomNum) {
             alert('Ваше число меньше загаданного');
@@ -19,6 +25,7 @@ document.querySelector('.guess_num').addEventListener('click', function () {
         }
     }
 })
+
 // Задание 1
 
 const lessNum = (a, b) => a <= b ? a : b;
