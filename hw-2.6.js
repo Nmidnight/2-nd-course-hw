@@ -159,8 +159,18 @@ console.log(negativeNums(task13));
 
 const task14 = []
 for (let i = 0; i < 10; i++) {
-    task14.push(Math.floor(Math.random() * 11)  * 11); 
+    task14.push(Math.floor(Math.random() * 11)); 
 }
 console.log(task14);
 const even = task14.filter(num => num % 2 === 0);
-console.log(odd);
+console.log(even);
+
+// Задание 15
+
+const task15 = []
+for (let i = 0; i < 10; i++) {
+    task15.push(Math.floor(Math.random() * 11)); 
+}
+const sum = task15.reduce((acc, num) => acc + num, 0);
+
+console.log(sum / task15.length);
