@@ -14,7 +14,7 @@ document.getElementById('reverse_text').addEventListener('click', function () {
 
 // Игра "Простая викторина"
 
-document.getElementById('simple_quiz').addEventListener('click', function () {
+document.querySelector('#simple_quiz .main__game-button').addEventListener('click', function () {
     const quiz = [
         {
             question: "Какой цвет небо?", // Кажется "Какого цвета небо?" или "Какой цвет у неба?" будет лучше:)
