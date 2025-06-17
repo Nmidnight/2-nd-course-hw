@@ -62,13 +62,33 @@ console.log(filter(people, isMale));
 
 // Задание 3
 
-let count = 0;
 const intervalId = setInterval(() => {
     console.log(`Текущая дата: ${new Date().toLocaleDateString()}`);
-    count += 3;
 }, 3000);
 
 setTimeout(() => {
     clearInterval(intervalId);
     console.log('30 секунд прошло');
 }, 30000);
+
+// Задание 4
+
+function delayForSecond(callback) {
+    setTimeout(() => {callback()}, 1000);
+}
+
+delayForSecond(function () {
+   console.log('Привет, Глеб!');
+})
+
+// Задание 5
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
+}
+function sayHi (name) {
+    console.log('Привет, ${name}!');
+}
+delayForSecond(() => sayHi('Глеб'));
