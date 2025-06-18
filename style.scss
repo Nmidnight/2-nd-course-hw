@@ -385,6 +385,7 @@ body {
     }
     .main__card-starB, .main__card-starT, .main__cards-starR, .main__cards-starL {
         display: none;
+        z-index: 2;
     }
     .footer__text {
         font-size: 16px;
