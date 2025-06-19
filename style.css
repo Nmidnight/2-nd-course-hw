@@ -32,7 +32,7 @@ body {
 
 .header {
   min-height: 800px;
-  padding: 195px 0 246px 0;
+  padding-top: 195px;
   background: #e1ff8f;
   position: relative;
 }
@@ -93,21 +93,29 @@ body {
   color: #000;
 }
 .header__tape {
-  position: absolute;
-  display: flex;
+  width: 100%;
+  margin-top: 156px;
   align-items: center;
-  gap: 50px;
   background-color: #BCEC30;
   overflow: hidden;
   height: 90px;
-  bottom: 0;
-  left: 0;
-  animation: scroll-left 10s linear infinite;
+  display: flex;
+}
+.header__tape-inner {
+  align-items: center;
+  display: flex;
+  animation: scroll-left 20s linear infinite;
+  white-space: nowrap;
 }
 .header__tape-text {
   font-size: 30px;
   font-weight: 700;
   white-space: nowrap;
+  margin-right: 20px;
+}
+.header__tape-star {
+  flex-shrink: 0;
+  margin-right: 20px;
 }
 
 .main {

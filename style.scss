@@ -20,7 +20,7 @@ body {
 }
 .header {
     min-height: 800px;
-    padding: 195px 0 246px 0;
+    padding-top: 195px;
     background: #e1ff8f;
     position: relative;
     &__stars-right {
@@ -67,23 +67,34 @@ body {
         }
     }
     &__tape {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        gap: 50px;
-        background-color: #BCEC30;
-        overflow: hidden;
-        height: 90px;
-        bottom: 0;
-        left: 0;
-        animation: vars.$animation;
+    width: 100%;
+    margin-top: 156px;
+    align-items: center;
+    background-color: #BCEC30;
+    overflow: hidden;
+    height: 90px;
+    display: flex;
+        &-inner {
+            align-items: center;
+            display: flex;
+            animation: scroll-left 20s linear infinite; 
+            white-space: nowrap;
+        }
+
         &-text {
             font-size: 30px;
             font-weight: 700;
             white-space: nowrap; 
+            margin-right: 20px;
         }
+        &-star {
+            flex-shrink: 0;
+            margin-right: 20px;
+  }
+
     }
 }
+
 .main {
     background: #202027;
     position: relative;
