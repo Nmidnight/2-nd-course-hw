@@ -66,6 +66,23 @@ body {
             @include vars.button_hover;
         }
     }
+    &__tape {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        background-color: #BCEC30;
+        overflow: hidden;
+        height: 90px;
+        bottom: 0;
+        left: 0;
+        animation: vars.$animation;
+        &-text {
+            font-size: 30px;
+            font-weight: 700;
+            white-space: nowrap; 
+        }
+    }
 }
 .main {
     background: #202027;
@@ -391,3 +408,4 @@ body {
         font-size: 16px;
     }
 }
+

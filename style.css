@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -83,6 +91,23 @@ body {
 .header__button:hover {
   background-color: #fff;
   color: #000;
+}
+.header__tape {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background-color: #BCEC30;
+  overflow: hidden;
+  height: 90px;
+  bottom: 0;
+  left: 0;
+  animation: scroll-left 10s linear infinite;
+}
+.header__tape-text {
+  font-size: 30px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .main {
@@ -392,6 +417,7 @@ body {
   }
   .main__card-starB, .main__card-starT, .main__cards-starR, .main__cards-starL {
     display: none;
+    z-index: 2;
   }
   .footer__text {
     font-size: 16px;
