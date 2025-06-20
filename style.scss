@@ -19,6 +19,8 @@ body {
     font-family: "Montserrat", system-ui, sans-serif;
 }
 .header {
+    display: flex;
+    flex-wrap: wrap;
     min-height: 800px;
     padding-top: 195px;
     background: #e1ff8f;
@@ -51,8 +53,10 @@ body {
     }
     &__description {
         font-size: 24px;
-        line-height: 32px;
-        white-space: pre-line;
+        line-height: 32px; 
+        &-mobile {
+            display: none;
+        }
     }
     &__description-bold {
         font-weight: 600;
@@ -68,7 +72,7 @@ body {
     }
     &__tape {
     width: 100%;
-    margin-top: 156px;
+    align-self: end;
     align-items: center;
     background-color: #BCEC30;
     overflow: hidden;
@@ -86,6 +90,7 @@ body {
             font-weight: 700;
             white-space: nowrap; 
             margin-right: 20px;
+            text-transform: uppercase;
         }
         &-star {
             flex-shrink: 0;
@@ -104,16 +109,19 @@ body {
         max-width: 1200px;
         margin: 0 auto;
         color: white;
-        padding: 48px 0 146px;
+        padding: 48px 0 95px;
     }
     &__section {
         margin: 46px 0 50px;
+        &-cards {
+            margin-bottom: 96px;
+        }
     }
     &__description {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 6px;
     }
     &__title {
         font-weight: 700;
@@ -180,7 +188,7 @@ body {
     }
     &__cards-starR {
         @include vars.stars;
-        top: 77px;
+        top: 115px;
         right: 0;
     }
     &__cards-starL {
@@ -202,7 +210,7 @@ body {
         gap: 32px;
         border-radius: 30px;
         &:first-child {
-            margin-top: 72px;
+            margin-top: 45px;
         }
         scroll-margin-top: 120px;
     }
@@ -217,10 +225,13 @@ body {
         width: 100%;
         padding: 48px;
     }
+    &__game-reversed {
+        padding-left: 15px;
+    }
     &__game-title {
         font-weight: 700;
         font-size: 48px;
-        margin-bottom: 16px;
+        margin-bottom: 25px;
         white-space: pre-line;
     }
     &__game-text {
@@ -228,7 +239,7 @@ body {
         white-space: pre-line;
     }
     &__game-button {
-        margin-top: 36px;
+        margin-top: 42px;
         @include vars.button;
         &:hover {
             @include vars.button_hover;
@@ -262,8 +273,12 @@ body {
 }
 @media (max-width: 1200px) {
     .header {
-        padding: 120px 20px 160px;
+        padding-top: 160px;
+        height: 700px;
 
+        &__content {
+            padding: 0 20px;
+        }
         &__title {
             font-size: 48px;
         }
@@ -275,12 +290,18 @@ body {
         &__button {
             padding: 12px 48px;
         }
+        &__tape {
+            height: 60px;
+            &-text {
+                font-size: 24px;
+            }
+        }
     }
 
     .main {
         &__content,
         &__games {
-            padding: 32px 20px 80px;
+            padding: 32px 16px 80px;
         }
 
         &__title {
@@ -344,6 +365,7 @@ body {
 
         &__game-button {
             margin-top: 24px;
+            font-size: 16px;
         }
     }
 
@@ -358,15 +380,27 @@ body {
 
 @media (max-width: 768px) {
 
-    .header {
+    .header { 
+        min-height: 700px;
+        padding-top: 80px;
         text-align: center;
 
+        &__content {
+            height: auto;
+            padding-bottom: 0px;
+        }
         &__title {
             font-size: 40px;
         }
         &__description {
             font-size: 16px;
             white-space: normal;
+            &-mobile {
+                display: block;
+            }
+            &-desktop {
+                display: none;
+            }
         }
         &__button {
             width: 285px;
@@ -375,7 +409,7 @@ body {
             padding: 20px 0;
         }
         &__stars-left {
-            width: 75px;
+            width: 70px;
             left: 37px;
         }
         &__stars-bottom {
@@ -383,33 +417,59 @@ body {
             right: 34px;
             bottom: 79px;
         }
+        &__tape {
+            height: 50px;
+            &-text {
+                font-size: 16px;
+            }
+        }
     }
-    .main__content {
-        padding-bottom: 10px;
-    }
-    .main__section-cards {
-        display: none;
-    }
-    .main__title {
-        font-size: 40px;
-    }
-    .main__card-text {
-        justify-content: center;
-    }
-
-    .main__game:nth-child(odd) {
-        flex-direction: column-reverse;
-    }
-    .main__game-title {
-        font-size: 32px;
-    }
-
-    .main__game-text {
-        font-size: 16px;
-    }
-    .main__game-button{
-        width: 100%;
-        height: 55px;
+    .main {
+        &__content{
+            padding-bottom: 52px;
+        }
+        &__title {
+            font-size: 40px;
+        }
+        &__section {
+            margin: 15px 0 0;
+            &-cards {
+                display: none;
+            }
+        }
+        &__games {
+            padding: 0;
+        }
+        &__game{
+            gap: 29px;
+            &:first-child{
+                margin-top: 28px;
+            }
+            & img {
+                height: 285px;
+            }
+            &:nth-child(odd) {
+               flex-direction: column-reverse;
+            }
+            &-description {
+                padding: 0 29px 32px;
+            }
+            &-container {
+                gap: 26px;
+            }
+            &-title {
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+            &-text {
+                font-size: 16px;
+                white-space: normal;
+            }
+            &-button {
+                width: 285px;
+                margin-top: 32px;
+            }
+        }
     }
     .main__card-starB, .main__card-starT, .main__cards-starR, .main__cards-starL {
         display: none;
