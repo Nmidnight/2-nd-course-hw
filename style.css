@@ -57,7 +57,8 @@ body {
 }
 .header__content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: max(0px, (100% - 1200px) / 2);
+  margin-right: auto;
   position: relative;
   z-index: 3;
 }
@@ -327,6 +328,7 @@ body {
     height: 700px;
   }
   .header__content {
+    margin: 0 auto;
     padding: 0 20px;
   }
   .header__title {
