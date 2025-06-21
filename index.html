@@ -22,10 +22,38 @@
             <h1 class="header__title">Добро пожаловать
                 на мой сайт мини-игр
             </h1>
-            <p class="header__description">Тебе предстоит пройти несколько увлекательных игр.
-                Если готов, нажимай <span class="header__description-bold">«Поехали!»</span>
-                и <span class="header__description-bold">приступай.</span></p>
+            <p class="header__description-mobile">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <span class="header__description-bold">«Поехали!»</span> и <span class="header__description-bold">приступай.</span></p>
+            <p class="header__description header__description-desktop">Тебе предстоит пройти несколько увлекательных игр.</p>
+            <p class="header__description header__description-desktop">Если готов, нажимай <span class="header__description-bold">«Поехали!»</span> и <span class="header__description-bold">приступай.</span></p>
             <a href="#main__cards" class="header__button">Поехали!</a>
+        </div>
+        <div class="header__tape">
+            <div class="header__tape-inner">
+                <p class="header__tape-text">Викторина</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Угадай число</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Переверни текст</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Простая арифметика</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Камень, ножницы, бумага</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Генератор случайных цветов</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Викторина</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Угадай число</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Переверни текст</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Простая арифметика</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Камень, ножницы, бумага</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+                <p class="header__tape-text">Генератор случайных цветов</p>
+                <img class="header__tape-star" src="SVG/tape-star.svg" alt="tape__star">
+            </div>
         </div>
     </header>
     <main class="main">
@@ -121,7 +149,7 @@
                         </div>
                         <div class="main__game" id="simple_arithmetic">
                             <img src="img/card_22.png" alt="simple_arithmetic">
-                            <div class="main__game-description">
+                            <div class="main__game-description main__game-reversed">
                                 <h3 class="main__game-title">Простая
                                     арифметика</h3>
                                 <p class="main__game-text">Попробуй решить простые
@@ -139,29 +167,29 @@
                             </div>
                             <img src="img/card_33.png" alt="reverse_text">
                         </div>
-                        <div class="main__game" id="rock_paper_scissors">
-                            <img src="img/card_44.png" alt="rock_paper_scissors">
-                            <div class="main__game-description">
-                                <h3 class="main__game-title"> Камень,
-                                    ножницы,
-                                    бумага </h3>
-                                <p class="main__game-text">Сыграй в популярную игру против компьютера.</p>
-                                <button type="button" class="main__game-button">Играть!</button>
-                            </div>
-                        </div>
                         <div class="main__game" id="simple_quiz">
-                            <div class="main__game-description">
-                                <h3 class="main__game-title">Простая
-                                    викторина</h3>
+                            <img src="img/card_55.png" alt="quiz">
+                            <div class="main__game-description main__game-reversed">
+                                <h3 class="main__game-title">Викторина</h3>
                                 <p class="main__game-text">Отвечай на вопросы викторины
                                     с вариантами ответов.</p>
                                 <button type="button" class="main__game-button">Играть!</button>
                             </div>
-                            <img src="img/card_55.png" alt="quiz">
+                        </div>
+                        <div class="main__game" id="rock_paper_scissors">
+                            <div class="main__game-description">
+                                <h3 class="main__game-title"> Камень,
+                                    ножницы,
+                                    бумага </h3>
+                                <p class="main__game-text">Сыграй в популярную игру
+                                     против компьютера.</p>
+                                <button type="button" class="main__game-button">Играть!</button>
+                            </div>
+                            <img src="img/card_44.png" alt="rock_paper_scissors">
                         </div>
                         <div class="main__game" id="random_color_generator">
                             <img src="img/card_66.png" alt="random_color_generator">
-                            <div class="main__game-description">
+                            <div class="main__game-description main__game-reversed">
                                 <h3 class="main__game-title">Генератор
                                     случайных
                                     цветов</h3>
@@ -182,10 +210,7 @@
             <p class="footer__text">Все права защищены.</p>
         </div>
     </footer>
-    <script src="hw-2.5.js"></script>
-    <script src="hw-2.6.js"></script>
-    <script src="hw-2.7.js"></script>
-    <script src="hw-2.8.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
