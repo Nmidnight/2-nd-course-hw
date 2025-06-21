@@ -55,9 +55,7 @@ body {
     &__description {
         font-size: 24px;
         line-height: 32px; 
-        &-mobile {
-            display: none;
-        }
+        white-space: pre-line;
     }
     &__description-bold {
         font-weight: 600;
@@ -287,6 +285,7 @@ body {
 
         &__description {
             font-size: 20px;
+            white-space: normal;
         }
 
         &__button {
@@ -397,12 +396,7 @@ body {
         &__description {
             font-size: 16px;
             white-space: normal;
-            &-mobile {
-                display: block;
-            }
-            &-desktop {
-                display: none;
-            }
+            
         }
         &__button {
             width: 285px;

@@ -71,9 +71,7 @@ body {
 .header__description {
   font-size: 24px;
   line-height: 32px;
-}
-.header__description-mobile {
-  display: none;
+  white-space: pre-line;
 }
 .header__description-bold {
   font-weight: 600;
@@ -336,6 +334,7 @@ body {
   }
   .header__description {
     font-size: 20px;
+    white-space: normal;
   }
   .header__button {
     padding: 12px 48px;
@@ -426,12 +425,6 @@ body {
   .header__description {
     font-size: 16px;
     white-space: normal;
-  }
-  .header__description-mobile {
-    display: block;
-  }
-  .header__description-desktop {
-    display: none;
   }
   .header__button {
     width: 285px;
