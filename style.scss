@@ -383,7 +383,7 @@ body {
 
     .header { 
         min-height: 700px;
-        padding-top: 80px;
+        padding-top: 85px;
         text-align: center;
 
         &__content {
@@ -395,8 +395,7 @@ body {
         }
         &__description {
             font-size: 16px;
-            white-space: normal;
-            
+            line-height: 1.2;
         }
         &__button {
             width: 285px;
